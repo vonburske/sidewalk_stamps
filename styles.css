@@ -18,7 +18,7 @@
 body {
     margin: 0rem 2rem;
     font-family: MDLórien Regular;
-    font-size: 17px;
+    font-size: 1.125rem;
     line-height: 150%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -32,7 +32,7 @@ p {
 
 .body-text-sans {
     font-family: MDSystem Regular;
-    font-size: 17px;
+    font-size: 1.125rem;
     line-height: 150%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;    
@@ -40,7 +40,7 @@ p {
 
 .body-text-sans-small {
     font-family: MDSystem Regular;
-    font-size: 14px;
+    font-size: .875rem;
     line-height: 150%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;    
@@ -48,7 +48,7 @@ p {
 
 .body-text-serif-small {
     font-family: MDLórien Regular;
-    font-size: 14px;
+    font-size: .875rem;
     line-height: 150%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;    
@@ -59,12 +59,6 @@ p {
     justify-content: space-between;
     align-items: center;
     padding: 2rem 0rem;
-}
-
-
-.nav-links {
-    display: flex;
-    gap: 2rem;
 }
 
 
@@ -83,7 +77,7 @@ ul {
 a {
     color: #000000;
     font-family: MDSystem Regular;
-    font-size: 17px;
+    font-size: 1.125rem;
     text-decoration: none;
     /* transition: 0.3s ease;  */
 }
