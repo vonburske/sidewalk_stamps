@@ -45,9 +45,9 @@
                 <p>Want to contribute to this archive? <br> Please email pictures of sidewalk stamps you’ve found in
                     your own neighborhood!
                 </p>
-                <a href="#">
+                <p id="email-copy-link">
                     chris@vonburske.design
-                </a>
+                </p>
 
             </div>
         </div>
@@ -75,6 +75,21 @@
         </div>
 
     </div>
+
+    <script>
+        const emailCopyLink = document.querySelector('#email-copy-link');
+        const emailAddress = emailCopyLink.textContent.trim();
+
+        emailCopyLink.addEventListener('click', async (event) => {
+            event.preventDefault();
+            await navigator.clipboard.writeText(emailAddress);
+            emailCopyLink.textContent = 'Copied!';
+
+            setTimeout(() => {
+                emailCopyLink.textContent = emailAddress;
+            }, 1500);
+        });
+    </script>
 
 
 </body>

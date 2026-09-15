@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: MDLórien Regular;
     src: url("fonts/MD Lorian/MDLórien-Regular.woff2");
 }
@@ -11,35 +11,63 @@
 @font-face {
     font-family: MDSystem Regular;
     src: url("fonts/MD System/MDSystem-Regular.woff2");
+} */
+
+@font-face {
+    font-family: Areal;
+    src: url("fonts/Areal.woff2") format("woff2");
+    font-weight: 100 900;
+    font-stretch: 75% 125%;
+    font-style: normal;
 }
 
+@font-face {
+    font-family: ArealSemiMono;
+    src: url("fonts/ArealSemiMono.woff2") format("woff2");
+    font-weight: 100 900;
+    font-stretch: 75% 125%;
+    font-style: normal;
+}
 
+@font-face {
+    font-family: ArealMono;
+    src: url("fonts/ArealMono.woff2") format("woff2");
+    font-weight: 100 900;
+    font-stretch: 75% 125%;
+    font-style: normal;
+}
 
 body {
-    margin: 0rem 2rem;
-    font-family: MDLórien Regular;
-    font-size: 1.125rem;
+    padding: 1rem 2rem 2rem 2rem;
+    font-family: Areal;
+    font-stretch: 100%;
+    font-feature-settings: "ss06";
+    font-size: 1rem;
     line-height: 150%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #F2F0E9;
+    text-wrap: pretty;
 }
 
+::selection {
+    background-color: #885d00;
+    color: #F2F0E9;
+}
 
 p {
     margin: 0;
 }
 
 .body-text-sans {
-    font-family: MDSystem Regular;
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 150%;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;    
+    -moz-osx-font-smoothing: grayscale; 
 }
 
 .body-text-sans-small {
-    font-family: MDSystem Regular;
+    font-family: ArealMono;
     font-size: .875rem;
     line-height: 150%;
     -webkit-font-smoothing: antialiased;
@@ -47,7 +75,7 @@ p {
 }
 
 .body-text-serif-small {
-    font-family: MDLórien Regular;
+    font-family: ArealMono;
     font-size: .875rem;
     line-height: 150%;
     -webkit-font-smoothing: antialiased;
@@ -58,7 +86,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 0rem;
+    padding: 0rem 0rem;
 }
 
 
@@ -76,8 +104,7 @@ ul {
 
 a {
     color: #000000;
-    font-family: MDSystem Regular;
-    font-size: 1.125rem;
+    font-size: 1rem;
     text-decoration: none;
     /* transition: 0.3s ease;  */
 }
@@ -88,17 +115,18 @@ a:hover {
 
 .hero-content-container {
     margin-top: 64px;
+    height: 80vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 5rem;
 
 }
 
 .hero-content-left {
-    flex: 3;
-    max-width: 40vw;
-    height: 75vh;
+    flex: 1 1 0;
+    max-width: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -111,7 +139,6 @@ a:hover {
 }
 
 .button-underlined {
-    font-family: MDSystem Regular;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -143,13 +170,21 @@ a:hover {
     background-color: #eae9e9;
 }
 
+#email-copy-link {
+    cursor: pointer;
+}
+
 .hero-content-right {
-    flex: 1;
-    max-width: 25vw;
+    flex: 1 1 0;
+    max-width: 30%;
     height: 80vh;
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
+}
+
+.hero-content-right > :first-child {
+    margin-bottom: -1rem;
 }
 
 .hero-content-right img {
