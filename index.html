@@ -1,8 +1,10 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An archive of stamped sidewalk maker's marks found around the neighborhood, collected and documented over time.">
     <title>Sidewalk Stamps</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -11,7 +13,7 @@
     <header>
         <nav class="navbar" aria-label="Main Navigation">
             <div class="logo">
-                <a href="#">Sidewalk Stamps</a>
+                <h1><a href="index.html">Sidewalk Stamps</a></h1>
             </div>
             <div class="nav-links">
                 <a href="#stamps">All Stamps</a>
@@ -29,7 +31,7 @@
                     the years. Beyond the stamp’s aesthetic appeal, they also tell the history of a neighborhood, which
                     is why I think they’re worth collecting and archiving.
                 </p>
-                <a href="#" class="no-decoration">
+                <a href="#stamps" class="no-decoration">
                     <div class="button-underlined">
                         <p>
                             View All Stamps
@@ -51,11 +53,11 @@
 
             </div>
         </div>
-        <div class="hero-content-right">
-            <p class="body-text-sans">Stamp Hall of Fame:
-            </p>
+        <div class="hero-content-right" id="stamps">
+            <h2 class="body-text-sans">Stamp Hall of Fame:
+            </h2>
             <div class="stamp-thumbnail-card">
-                <img src="images/SidewalkStamp-Temp.jpg" alt="" width="auto" height="auto">
+                <img src="images/SidewalkStamp-Temp.jpg" alt="Sidewalk stamp reading 'Laid by Arcwright & Hutcher Construction', the oldest stamp in the archive." width="666" height="418">
                 <p class="body-text-sans-small">
                     Oldest Stamp
                 </p>
@@ -64,7 +66,7 @@
                 </p>
             </div>
             <div class="stamp-thumbnail-card">
-                <img src="images/SidewalkStamp-Temp.jpg" alt="" width="auto" height="auto">
+                <img src="images/SidewalkStamp-Temp.jpg" alt="Sidewalk stamp reading 'Laid by Arcwright & Hutcher Construction', the newest stamp in the archive." width="666" height="418">
                 <p class="body-text-sans-small">
                     Newest Stamp
                 </p>
@@ -82,15 +84,19 @@
 
         emailCopyLink.addEventListener('click', async (event) => {
             event.preventDefault();
-            await navigator.clipboard.writeText(emailAddress);
-            emailCopyLink.textContent = 'Copied!';
+
+            try {
+                await navigator.clipboard.writeText(emailAddress);
+                emailCopyLink.textContent = 'Copied!';
+            } catch (error) {
+                emailCopyLink.textContent = 'Copy failed, please copy manually';
+            }
 
             setTimeout(() => {
                 emailCopyLink.textContent = emailAddress;
             }, 1500);
         });
     </script>
-
 
 </body>
 
